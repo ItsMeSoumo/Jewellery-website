@@ -102,7 +102,10 @@ export const UncutDiamond = () => {
             </div>
             <div className="p-8">
               <h2 className="text-2xl font-bold text-yellow-400 mb-2">{item.name}</h2>
-              <p className="text-yellow-300 font-semibold mb-3">Rs. {item.price}</p>
+              <p className="text-yellow-300 luxury-price mb-3">
+                <span className="price-currency">$</span>
+                {item.price}
+              </p>
               <p className="text-gray-300 mb-6">{item.description}</p>
               <div className="flex justify-between items-center">
                 <motion.button 

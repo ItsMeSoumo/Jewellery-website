@@ -104,8 +104,11 @@ export const Hero = () => {
             <p className="text-gray-300 mb-6">{slide.subtitle}</p>
 
             <div className="mb-8">
-              <span className="text-gray-400 text-sm">Starting At</span>
-              <div className="text-yellow-400 text-3xl font-bold">Rs. {slide.price}</div>
+              <span className="text-gray-400 luxury-price-small">Starting At</span>
+              <div className="text-yellow-400 luxury-price-large">
+                <span className="price-currency">$</span>
+                {slide.price}
+              </div>
             </div>
 
             <button 

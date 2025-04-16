@@ -11,7 +11,7 @@ export const Navbar = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
               </div>
-              <p className="text-sm">Free Support: 8888885555</p>
+              <p className="text-sm">Free Support: <span className="luxury-price-small">8888885555</span></p>
             </div>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-yellow-400">
@@ -86,8 +86,8 @@ export const Navbar = () => {
                 to={item.path}
                 className={({ isActive }) => 
                   isActive 
-                    ? "text-yellow-400 font-medium nav-link active"
-                    : "text-gray-300 hover:text-yellow-400 transition-all font-medium nav-link"
+                    ? "font-medium nav-link nav-button active"
+                    : "font-medium nav-link nav-button transition-all"
                 }
               >
                 {item.name}
@@ -115,7 +115,9 @@ export const Navbar = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                 </svg>
               </button>
-              <span className="ml-2 font-medium text-yellow-400">Rs.67,598</span>
+              <span className="ml-2 luxury-price text-yellow-400">
+                <span className="price-currency">$</span>67,598
+              </span>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>

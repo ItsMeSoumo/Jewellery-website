@@ -135,7 +135,10 @@ export const SpecialCollection = () => {
                       />
                     </div>
                     <h3 className="font-bold text-white">{item.name}</h3>
-                    <p className="text-yellow-300">Rs. {item.price}</p>
+                    <p className="text-yellow-300 luxury-price">
+                      <span className="price-currency">$</span>
+                      {item.price}
+                    </p>
                     
                     <div className="mt-3 pt-3 border-t border-gray-800 flex justify-between items-center">
                       <motion.button 

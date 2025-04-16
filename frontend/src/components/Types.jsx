@@ -174,10 +174,10 @@ export const Types = () => {
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              className={`px-8 py-3 font-medium transition-all duration-300 ${
+              className={`px-8 py-3 font-medium transition-all duration-300 nav-button ${
                 activeTab === tab.id
-                  ? "text-yellow-400"
-                  : "text-gray-400 hover:text-gray-200"
+                  ? "active"
+                  : ""
               }`}
               onClick={() => setActiveTab(tab.id)}
             >
@@ -210,8 +210,14 @@ export const Types = () => {
                 <div className="text-xs text-gray-300 mb-1">{item.category}</div>
                 <h3 className="font-bold text-white mb-2">{item.name}</h3>
                 <div className="flex flex-col justify-center">
-                  <span className="text-gray-400 line-through text-sm">{item.originalPrice}</span>
-                  <span className="text-white font-semibold">{item.salePrice}</span>
+                  <span className="text-gray-400 line-through luxury-price-small">
+                    <span className="price-currency">$</span>
+                    {item.originalPrice.replace('Rs. ', '')}
+                  </span>
+                  <span className="text-yellow-300 luxury-price">
+                    <span className="price-currency">$</span>
+                    {item.salePrice.replace('Rs. ', '')}
+                  </span>
                 </div>
               </div>
             </motion.div>
